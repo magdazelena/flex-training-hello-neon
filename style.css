@@ -181,28 +181,29 @@ section.services {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    padding-left: 30px;
+    align-items: baseline;
 }
 
-.services div.inner1 {
-    flex: 2;
+section.services div.inner1 {
+    flex: 1 1 40%;
+    min-width: 250px;
+    margin-bottom: 30px;
 }
 
-div.inner1 p {
+section.services div.inner1 p {
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 50px;
-    padding-left: 30px;
 }
 
 section.services div.inner2 {
-    flex: 3;
+    flex: 1 1 60%;
     display: flex;
     flex-wrap: wrap;
 }
 
 section.services div.inner2 p {
-    padding: 10px;
     flex: 1 1 40%;
 }
 
@@ -213,7 +214,7 @@ section.services div.inner2 .subinner {
 
 .subinner .img-container {
     flex: 0 1 auto;
-    padding: 10px;
+    margin: 5px 10px 10px 0;
 }
 
 .subinner img {
@@ -234,37 +235,32 @@ h4 {
 }
 
 section.contact {
-    min-width: 60%;
-    flex: 0 0 60%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
+    padding-left: 30px;
 }
 
 section.contact h3 {
     width: 100%;
     color: #6d21e0;
-}
-
-section.contact div.inner2 {
-    padding-top: 30px;
-}
-
-div.inner2 p {
-    padding-top: 20px;
+    padding-left: 0;
 }
 
 section.contact div.inner1 {
-    flex: 2;
+    flex: 1 1 40%;
+    min-width: 250px;
+    margin-bottom: 30px;
 }
 
 section.contact div.inner2 {
-    flex: 3;
-    padding-left: 30px;
+    flex: 1 1 60%;
 }
 
 button.send {
     text-transform: uppercase;
-    width: 65%;
+    width: 70%;
     height: 50px;
     background-color: #ffffff;
     border: none;
@@ -275,21 +271,20 @@ button.send {
     font-size: 1em;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-left: 27px;
     outline: none;
 }
 
 section.contact input {
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
     color: #ffffff;
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     display: block;
-    width: 68%;
-    margin: 30px;
-    padding: 10px 0 20px 10px;
+    margin: 30px 0;
+    padding: 0 0 10px 10px;
+    width: 80%;
 }
 
 section.contact input:focus { 
@@ -319,5 +314,9 @@ section.contact input:focus {
 
     nav.subpages a {
         font-size: 2vw;
+    }
+
+    article.opening-hours p {
+        font-size: 24px;
     }
 }
