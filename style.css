@@ -22,6 +22,7 @@ header {
 }
 
 .top {
+        /* flex tutaj chyba niepotrzebny bo w środku są same elementy blokowe które i tak będą pod sobą? */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +33,7 @@ header {
 
 .now-its-time {
     position: absolute;
+    /* flex tutaj chyba niepotrzebny bo w środku są same elementy blokowe które i tak będą pod sobą? */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -247,7 +249,11 @@ section.contact h3 {
     color: #6d21e0;
     padding-left: 0;
 }
-
+/* te klasy inner1 i inner2 mają sens w layoucie, bo powtarzają formatowanie - lepiej by było opisać je bez nestingu, tylko raz:
+.inner1 {
+    bl bla
+}
+wtedy możesz powrótrzyć ten sam styl dla wszystkich elementów z tą klasą, zamiast powielać */
 section.contact div.inner1 {
     flex: 1 1 40%;
     min-width: 250px;
@@ -320,3 +326,15 @@ section.contact input:focus {
         font-size: 24px;
     }
 }
+
+/* Ogólne:
+1. Struktura kodu powinna być taka: ogólne >> specyficzne
+    To znaczy u góry wypisaujesz wszystkie ogólne style, dla p, a, img (ogólnych tagów), potem po klasach
+    Wynika to z hierarchii dziedziczenia plus łatwiej nie pogubić się w kodzie
+2. Jeśli piszesz kod w ten sposób nie potrzebujesz potem odwoływać się do tagu+ klasy w ten sposób article.klasa
+    Wystarczy samo .klasa
+3. Jeśli przeklejasz jakąś linijkę to znak że trzeba się zatrzymać i pomyśleć czy nie dało się ogólnie. Przykładowo klasy inner1 itd. Albo układ dwukolumnowy. Nic nie stoi na przeszkodzie, żebyś oprócz .contact i .services miała oddzielną klasę .two-columns która miałaby display flex i w środku np .left (40%) i .right(60%)
+Pamiętaj, że id muszą być unikalne, ale klas element może mieć wiele i mogą się powtarzać 
+4. Spróbuj wyłuskać jednostki, które możes wyrzucić na zmienne, np 30px
+5. Spróbuj poczytać o jednostkach em i rem, są bardziej elastyczne od pikseli
+5. Dobre użycie media queries */
